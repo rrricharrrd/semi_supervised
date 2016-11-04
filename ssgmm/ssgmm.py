@@ -40,7 +40,7 @@ class SSGMM(GMM):
 
         In the case where labels are provided, log-probabilities for other class
         labels are set to -infinity so that they end up contributing zero to the
-        posterior.
+        likelihood.
         """
 
         # Firstly, calculate old unsupervised likelihood.
@@ -112,7 +112,7 @@ class SSGMM(GMM):
                 print(self.covars_)
 
     def _fit(self, X, y, do_prediction=False):
-        # initialization step
+        # Initialization step
         X = check_array(X, dtype=np.float64, ensure_min_samples=2,
                         estimator=self)
         if X.shape[0] < self.n_components:
@@ -208,7 +208,8 @@ class SSGMM(GMM):
         return responsibilities
 
     def fit(self, X, y=None):
-        """Estimate model parameters with the EM algorithm.
+        """
+        Estimate model parameters with the EM algorithm.
 
         A initialization step is performed before entering the
         expectation-maximization (EM) algorithm. If you want to avoid
@@ -224,8 +225,8 @@ class SSGMM(GMM):
 
         y : array_like, shape (n_samples)
             List of labels for data points in X. Labels should be non-negative
-            integers, no greater than n_components. Unlabelled data should
-            be given label -1. If None, defaults to standard GMM.
+            integers, in the range [0,...,n_components]. Unlabelled data should
+            be given the label -1. If None, defaults to standard GMM.
 
         Returns
         -------

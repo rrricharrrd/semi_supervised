@@ -42,7 +42,7 @@ class PUAdapter(BaseEstimator):
 
     References
     ----------
-    Elkan, Charles, Keith Noto.
+    Charles Elkan, Keith Noto.
         Learning classifiers from only positive and unlabeled data.
         Proceeding of the 14th ACM SIGKDD international conference on Knowledge
         discovery and data mining. ACM, 2008.
