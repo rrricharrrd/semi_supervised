@@ -20,8 +20,9 @@ import os
 import sys
 #sys.path.insert(0, os.path.abspath('.'))
 
-sys.path.append(os.path.dirname(os.getcwd())+'/puAdapter')
-sys.path.append(os.path.dirname(os.getcwd())+'/ssgmm')
+sys.path.append(os.path.dirname(os.getcwd())+'/semisupervised')
+sys.path.append(os.path.dirname(os.getcwd())+'/semisupervised/puAdapter')
+sys.path.append(os.path.dirname(os.getcwd())+'/semisupervised/ssgmm')
 
 # -- General configuration ------------------------------------------------
 
